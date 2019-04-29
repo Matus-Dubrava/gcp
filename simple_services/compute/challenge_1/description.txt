@@ -1,0 +1,10 @@
+1.  create new project
+2.  create instance that runs provided start-up script
+3.  make logs available in stackdriver
+4.  logs shoud appear in a new bucket once the instance finishes start-up script
+5.  there should be no need to ssh into instnace
+
+gcloud compute instances create myvm \
+    --metadata lab-log-bucket=gs://md-lab-logs-bucket \
+    --metadata-from-file startup-script=startup_script.sh \
+    --scopes cloud-platform

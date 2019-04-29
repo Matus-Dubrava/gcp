@@ -29,3 +29,10 @@
 
     -   and to set region
         -   **gcloud config set compute/region us-west2**
+
+-   connect to instance via ssh from console
+
+    -   **gcloud compute ssh <instance_name>**
+
+-   accessing instance metadata from within the instance
+    -   **curl -H "Metadata-Flavor:Google" metadata.google.internal/computeMetadata**
